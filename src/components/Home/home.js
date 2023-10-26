@@ -15,7 +15,9 @@ import { Link,useNavigate } from "react-router-dom";
   const [isFormOpen, setIsFormOpen] = useState(false);
   const navigate = useNavigate();
   const toggleForm = () => {
-    setIsFormOpen(!isFormOpen);
+    // setIsFormOpen(!isFormOpen);
+    navigate('/contact')
+    window.scrollTo(20, 20);
   };
   ///accordion
   const [activeIndex, setActiveIndex] = useState(null);
@@ -32,7 +34,7 @@ import { Link,useNavigate } from "react-router-dom";
     }
 };
 const handleBooking=()=>{
-  navigate('/booking');
+  navigate('/pricing');
   window.scrollTo(0, 0);
 }
 const handlePricing = ()=>{
@@ -123,15 +125,7 @@ Hyundai Starex : SGD 130
              </div>
        
              {/* Car */}
-             <div className="col-md-6 mb-3">
-               <select className="form-control" placeholder="Car">
-                 {/* Example cars */}
-                 <option value="" disabled selected>Select Car</option>
-                 <option value="Sedan">Sedan</option>
-                 <option value="SUV">SUV</option>
-                 {/* ... other cars ... */}
-               </select>
-             </div>
+          
        
              {/* Pickup Date */}
              <div className="col-md-6 mb-3">
@@ -141,11 +135,10 @@ Hyundai Starex : SGD 130
              {/* Pickup Time */}
              <div className="col-md-6 mb-3">
                <select className="form-control" placeholder="Pickup Time">
-                 {/* Example times */}
-                 <option value="" disabled selected>Select Pickup Time</option>
+            <option value="" disabled selected>Select Pickup Time</option>
                  <option value="09:00">09:00 AM</option>
                  <option value="10:00">10:00 AM</option>
-                 {/* ... other times ... */}
+                
                </select>
              </div>
        

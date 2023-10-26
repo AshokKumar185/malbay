@@ -6,7 +6,7 @@ import "./payment.css"
 import paynow from '../../asset/paynow2.jpg'
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import { FaUser, FaChild } from 'react-icons/fa';
 
 const Payment = () => {
   const location = useLocation();
@@ -51,13 +51,13 @@ console.log('Total Price:', totalPrice);
                 <div className="payment-card-container">
                     <div style={{display:'flex',justifyContent:'space-between'}} className="payment-destination"><p>{formData.pickLocation}</p> <p><BiTransferAlt style={{color: "#eadeded4",marginLeft:"20px"}}/></p><p> {formData.dropLocation}</p></div>
                     <h6 className="payment-location">Car Name  <span className="payment-destination">{formData.carName}</span></h6>
-                    <h6 className="payment-location">No of Adults  <span className="payment-destination">{formData.adults}</span></h6>
-                    <h6 className="payment-location">No of Children  <span className="payment-destination">{formData.children}</span></h6>
+                    <h6 className="payment-location"> Adults<FaUser className="iconnn" />   <span className="payment-destination">{formData.adults}</span></h6>
+                    <h6 className="payment-location"> Children  <FaChild className="iconn" /> <span className="payment-destination">{formData.children}</span></h6>
                     <hr/>
-                    <h6 className="payment-location">Price  <span className="payment-destination">{numericPrice}</span></h6>
-                    <h6 className="payment-location">GST  <span className="payment-destination">{gst}</span></h6>
+                    <h6 className="payment-location">Price  <span className="payment-destination">S${numericPrice}</span></h6>
+                    <h6 className="payment-location">GST  <span className="payment-destination">S${gst}</span></h6>
                     <hr/>
-                    <h6 className="payment-location">Amount  <span className="payment-destination">{totalPrice}</span></h6>
+                    <h6 className="payment-location">Amount  <span className="payment-destination">S${totalPrice}</span></h6>
 
                     <button className="cancel-payment-btn">Cancel Payment</button>
                 </div>

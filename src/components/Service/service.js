@@ -12,7 +12,7 @@ import { Link ,useNavigate} from "react-router-dom";
 const Service = () => {
     const navigate = useNavigate();
     const handleLearnmore=()=>{
-        navigate('/booking');
+        navigate('/pricing');
     
         window.scrollTo(0, 0);
     }

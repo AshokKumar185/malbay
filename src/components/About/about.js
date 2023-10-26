@@ -13,7 +13,7 @@ import "./about.css"
 const About = () => {
     const navigate = useNavigate();
 const handleKnowmore=()=>{
-    navigate('/booking');
+    navigate('/pricing');
 
     window.scrollTo(0, 0);
 }

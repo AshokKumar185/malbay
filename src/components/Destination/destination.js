@@ -28,7 +28,7 @@ const Destination = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:3005/api/packages/getallpackages')
+            .get('https://sg2mycabsing.onrender.com/api/packages/getallpackages')
             .then((response) => {
                 setPricingArr(response.data);
                 setLoader(!isLoader)

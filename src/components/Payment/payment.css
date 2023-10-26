@@ -4,6 +4,12 @@
     align-items: center;
     padding-bottom: 30px;
 }
+.iconnn {
+  margin-left: -180px;  /* Adjust this value to bring the icon closer or farther from the text */
+}
+.iconn {
+  margin-left: -170px;  /* Adjust this value to bring the icon closer or farther from the text */
+}
 .payment-bg-container {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -126,6 +132,12 @@
       display: block;
       padding-top: 0px;
       padding-bottom: 0px;
+    }
+    .iconnn {
+      margin-left: -240px;  /* Adjust this value to bring the icon closer or farther from the text */
+    }
+    .iconn {
+      margin-left: -230px;  /* Adjust this value to bring the icon closer or farther from the text */
     }
     .payment-card-container {
       width: 100%;
