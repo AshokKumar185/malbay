@@ -68,13 +68,14 @@ Hyundai Starex : SGD 130
   return (
     <div className="home">
  <div className="homequote">
-  <h1 className="animated-heading">EXPLORE DESTINATIONS,<br />WITH DISTINCTION.</h1>
+  <h1 className="animated-heading">EXPLORE DESTINATIONS,<br />WITH DISTINCTION.</h1> 
 </div>
 
       <div className="bgpic" style={{ backgroundImage: `url(${citypic})` }}>
       </div>
       <div className="homecontparas">
         <h2 className="Headinghome">MALBAY EXPRESS TRANSPORT SOLUTIONS</h2><br />
+       
         <p className="padding20px fontpara parahome">TrueWay Transport Solutions seamlessly connects Singapore to prime Malaysian spots like Johor Bahru and Legoland. Catering to diverse traveler needs, our MVP Private Car services offer safety, comfort, and affordability for individuals, families, and groups. With premium vehicles and skilled drivers, we ensure every journey transcends mere travel. Trust TrueWay for unparalleled transport solutions.</p>
 
         <button onClick={toggleForm} className="know-more-btn"> {isFormOpen ? "Close" : "Get Info"}</button>

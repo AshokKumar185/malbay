@@ -1,6 +1,6 @@
 .float-buttons {
     position: fixed;
-    bottom: 50%;
+    bottom: 30%;
     right: 20px;
     display: flex;
     flex-direction: column;
