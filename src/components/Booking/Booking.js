@@ -65,7 +65,7 @@ export const Booking = (props) => {
 
     const locationData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3005/api/packages/getpackage/${id}`)
+        const response = await axios.get(`https://sg2mycabsing.onrender.com/api/packages/getpackage/${id}`)
 
         if (response.status === 200) {
           const locData = response.data
