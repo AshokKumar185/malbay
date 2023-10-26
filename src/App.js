@@ -5,7 +5,7 @@ import Home from "./components/Home/home";
 import Location from "./components/Locations/location";
 import About from "./components/About/about";
 import Footer from "./components/Footer/footer";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes,useLocation } from "react-router-dom";
 import Service from "./components/Service/service"; // Corrected import
 import Fleets from "./components/Fleets/fleets";
 import Pricing from "./components/Pricing/pricing";
@@ -13,7 +13,13 @@ import FloatButtons from "./components/Floats/Float";
 import { Booking } from "./components/Booking/Booking";
 import Destination from "./components/Destination/destination";
 import Payment from "./components/Payment/payment";
-
+function ConditionalFooter() {
+  const location = useLocation();
+  if (location.pathname === '/payment') {
+    return null;  // Don't render Footer on /payment route
+  }
+  return <Footer />;
+}
 function App() {
   return (
     <>
@@ -33,7 +39,7 @@ function App() {
             <Route exact path="/payment" element={<Payment />} />
           </Routes>
         </div>
-        <Footer />
+        <ConditionalFooter />
         <FloatButtons/>
       </Router>
     </>

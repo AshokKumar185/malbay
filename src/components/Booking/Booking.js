@@ -31,15 +31,38 @@ export const Booking = (props) => {
   });
 
 
+  useEffect(() => {
+    if (dropLocations.location) {  // Check if location is defined to avoid setting undefined
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            dropLocation: dropLocations.location,
+        }));
+    }
+}, [dropLocations]);
   console.log(formData.dropLocation)
 
   const clickToPayPage = (event) => {
     event.preventDefault();
     console.log(formData);
     setBooking(formData);
-    navigate("/payment");
-    window.scrollTo(0, 0);
-  }
+
+    // Find the selected car object
+    const selectedCar = car.find(eachCar => eachCar.carName === formData.carName);
+    
+    // Check if a car was found and if so, extract the price
+    const selectedCarPrice = selectedCar ? selectedCar.price : null;
+
+    // Pass the id, formData, and selectedCarPrice to the Payment component via the state prop
+    navigate("/payment", {
+        state: {
+            id,
+            formData,
+            selectedCarPrice
+        }
+    });
+
+    window.scrollTo(20, 20);
+}
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
