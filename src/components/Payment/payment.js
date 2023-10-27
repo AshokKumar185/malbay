@@ -4,11 +4,12 @@ import { BiTransferAlt } from "react-icons/bi";
 import qrCode from "../../asset/WhatsApp_Image_2023-10-25_at_10.58.26_AM-removebg-preview.png"
 import "./payment.css"
 import paynow from '../../asset/paynow2.jpg'
-import { useLocation } from "react-router-dom";
+import { useLocation , useNavigate} from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaUser, FaChild } from 'react-icons/fa';
 
 const Payment = () => {
+    const navigate = useNavigate()
   const location = useLocation();
   const { id, formData, selectedCarPrice } = location.state;
     console.log(id,formData,selectedCarPrice)
@@ -40,17 +41,21 @@ useEffect(() => {
   }
 }, [numericPrice]);
 
+
+const  clickToCancel = () => {
+    navigate("/pricing")
+}
 // Log values to console
 console.log('GST Amount:', gst);
 console.log('Total Price:', totalPrice);
   console.log(formData.dropLocation)
 
     return (
-      <div >
+      <div className="payment-main-bg-container">
           <div   className="payment-bg-container">
             <div className="detail-image-container">
                 <div className="payment-card-container">
-                    <div style={{display:'flex',justifyContent:'space-between',fontWeight:'bold'}} className="payment-destination"><p>{formData.pickLocation}</p> <p><BiTransferAlt style={{ marginLeft:"20px"}}/></p><p> {formData.dropLocation}</p></div>
+                    <div style={{gap:"30px",display:'flex',justifyContent:'space-between',alignItems:"center",fontWeight:'bold'}} className="payment-destination"><p>{formData.pickLocation}</p> <p><BiTransferAlt style={{ marginLeft:"20px",color:"green",fontSize:"18px"}}/></p><p style={{fontSize:"13px"}}> {formData.dropLocation}</p></div>
                     <h6 className="payment-location">Car Name  <span className="payment-destination">{formData.carName}</span></h6>
                     <h6 className="payment-location"> Adults   <span className="payment-destination">{formData.adults}</span></h6>
                     <h6 className="payment-location"> Children   <span className="payment-destination">{formData.children}</span></h6>
@@ -60,10 +65,10 @@ console.log('Total Price:', totalPrice);
                     <hr/>
                     <h6 className="payment-location">Amount  <span className="payment-destination"><b>S${totalPrice}</b></span></h6>
 
-                    <button className="cancel-payment-btn">Cancel Payment</button>
+                    <button className="cancel-payment-btn" onClick={clickToCancel}>Cancel Payment</button>
                 </div>
+                <hr className="vertical-line"/>
                 <div className="payment-image-container">
-
                     <p className="invoice-desc">Scan QR code with your<br/> <img style={{width:"18%"}} src={paynow} alt="PayNow"></img> <br/>to proceed with payment</p>
                 <img src={qrCode} alt="qr code" className="qr-code-image" width={200} />
                 <button className="payment-pay-btn">Pay Now</button>

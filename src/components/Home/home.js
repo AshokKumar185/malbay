@@ -70,7 +70,7 @@ Hyundai Starex : SGD 130
   return (
     <div className="home">
  <div className="homequote">
-  <h1 className="animated-heading">EXPLORE DESTINATIONS,<br />WITH DISTINCTION.</h1> 
+  <h1 className="animated-heading">TRANSFORMING YOUR COMMUTE EXPERIENCE <br/> CONNECTING PEOPLE AND PLACES</h1> 
 </div>
 
       <div className="bgpic" style={{ backgroundImage: `url(${citypic})` }}>
@@ -78,7 +78,9 @@ Hyundai Starex : SGD 130
       <div className="homecontparas">
         <h2 className="Headinghome">MALBAY EXPRESS TRANSPORT SOLUTIONS</h2><br />
        
-        <p className="padding20px fontpara parahome">TrueWay Transport Solutions seamlessly connects Singapore to prime Malaysian spots like Johor Bahru and Legoland. Catering to diverse traveler needs, our MVP Private Car services offer safety, comfort, and affordability for individuals, families, and groups. With premium vehicles and skilled drivers, we ensure every journey transcends mere travel. Trust TrueWay for unparalleled transport solutions.</p>
+        <p className="padding20px fontpara parahome">At MalaBay Express Transport Solutions, we specialize in the safe and efficient transportation of people from singapore to malaysia. As a dedicated transport company, we understand the importance of reliable and comfortable 
+        transportation for individuals. Whether you need a convenient airport transfer, a dependable shuttle service, or private transportation for events, our experienced drivers are here to ensure you reach your destination with ease. Our commitment to safety, punctuality, and exceptional customer service sets us apart. We take pride in offering a range of
+         vehicles to accommodate your specific needs, and our drivers are trained to provide a pleasant and secure journey. Trust us to be your partner in personal transportation, and experience the convenience and peace of mind that MalBay Express Transport Solutions brings to every ride.</p>
 
         <button onClick={toggleForm} className="know-more-btn"> {isFormOpen ? "Close" : "Get Info"}</button>
       <br/>
@@ -189,8 +191,9 @@ Hyundai Starex : SGD 130
             <div className="fleet-container">
 
 <div className="fleet-text">
-  <h2>Our Elite Fleet<br/>BRIDGING SINGAPORE & MALAYSIA</h2>
-  <p>Journey in elegance and comfort with our premium MPVs. Each vehicle in our collection is diligently maintained, ensuring not just punctuality but also an immaculate presence. Experience the blend of luxury and reliability, every mile of the way.</p>
+  <h2>Seamless Transport Solutions<br/>Connecting Singapore and Malaysia</h2>
+  <p>Our extensive fleet of modern vehicles, a team of skilled professionals, and a commitment to punctuality ensure that your journey with us is smooth, secure,
+     and stress-free. Whether you're a business looking to optimize your supply chain, a traveler seeking convenience, or anyone in between, we're here to cater to your unique transport needs.</p>
 </div>
 
 <div className="fleet-images">
@@ -225,7 +228,8 @@ Hyundai Starex : SGD 130
         <h1>OUR FLEET</h1>
         <div className="line"></div>
     </div>
-    <p>Upholding the highest standards of safety, maintenance, and aesthetics, our diverse fleet boasts only the newest models of luxury sedans, SUVs, minibuses, and coaches. Explore our curated selection tailored to your preferences.</p>
+    <p>At MalBay Express, we are unwavering in our commitment to safety, maintenance, and aesthetic excellence. Our versatile fleet exclusively features the latest luxury sedan, SUV, minibus,
+       and coach models. Discover our carefully curated collection, thoughtfully designed to cater to your unique preferences."</p>
 
     <Slider {...settings}>
         <div>
