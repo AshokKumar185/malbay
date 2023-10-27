@@ -46,29 +46,32 @@ console.log('Total Price:', totalPrice);
   console.log(formData.dropLocation)
 
     return (
-        <div className="payment-bg-container">
+      <div >
+          <div   className="payment-bg-container">
             <div className="detail-image-container">
                 <div className="payment-card-container">
-                    <div style={{display:'flex',justifyContent:'space-between'}} className="payment-destination"><p>{formData.pickLocation}</p> <p><BiTransferAlt style={{color: "#eadeded4",marginLeft:"20px"}}/></p><p> {formData.dropLocation}</p></div>
+                    <div style={{display:'flex',justifyContent:'space-between',fontWeight:'bold'}} className="payment-destination"><p>{formData.pickLocation}</p> <p><BiTransferAlt style={{ marginLeft:"20px"}}/></p><p> {formData.dropLocation}</p></div>
                     <h6 className="payment-location">Car Name  <span className="payment-destination">{formData.carName}</span></h6>
-                    <h6 className="payment-location"> Adults<FaUser className="iconnn" />   <span className="payment-destination">{formData.adults}</span></h6>
-                    <h6 className="payment-location"> Children  <FaChild className="iconn" /> <span className="payment-destination">{formData.children}</span></h6>
+                    <h6 className="payment-location"> Adults   <span className="payment-destination">{formData.adults}</span></h6>
+                    <h6 className="payment-location"> Children   <span className="payment-destination">{formData.children}</span></h6>
                     <hr/>
-                    <h6 className="payment-location">Price  <span className="payment-destination">S${numericPrice}</span></h6>
-                    <h6 className="payment-location">GST  <span className="payment-destination">S${gst}</span></h6>
+                    <h6 className="payment-location">Price  <span className="payment-destination"><b>S${numericPrice}</b></span></h6>
+                    <h6 className="payment-location">GST  <span className="payment-destination"><b>S${gst}</b></span></h6>
                     <hr/>
-                    <h6 className="payment-location">Amount  <span className="payment-destination">S${totalPrice}</span></h6>
+                    <h6 className="payment-location">Amount  <span className="payment-destination"><b>S${totalPrice}</b></span></h6>
 
                     <button className="cancel-payment-btn">Cancel Payment</button>
                 </div>
                 <div className="payment-image-container">
-                    <h2 className="invoice-heading">Pay Invoice</h2>
-                    <p className="invoice-desc">Scan QR code with your <img style={{width:"18%"}} src={paynow} alt="PayNow"></img> <br/>to proceed with payment</p>
+
+                    <p className="invoice-desc">Scan QR code with your<br/> <img style={{width:"18%"}} src={paynow} alt="PayNow"></img> <br/>to proceed with payment</p>
                 <img src={qrCode} alt="qr code" className="qr-code-image" width={200} />
                 <button className="payment-pay-btn">Pay Now</button>
                 </div>
             </div>
         </div>
+      </div>
+      
     )
 }
 

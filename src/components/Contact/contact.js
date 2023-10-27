@@ -4,6 +4,7 @@ import Contactpic from '../../asset/contact_page_banner_img.jpg';
 import './contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone,faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 const Contact = () => {
 
     const [formData, setFormData] = useState({
