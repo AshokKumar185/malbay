@@ -1,0 +1,33 @@
+.destination-heading {
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #ffffff;
+    text-shadow: 0 0 3px #000000;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(93, 93, 93, 0.267);
+    border: 5px solid #FFF;
+}
+.destination-heading-container {
+    background-image: url("https://assets-global.website-files.com/620d42e86cb8ec4d0839e59d/6230e9244963aa3b684c5ed2_61cb6723e4c8112dbd440616_Location-Based-Services-Example.jpeg");
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:568px) {
+    .destination-heading-container {
+        width: 100%;
+    }
+}

@@ -9,12 +9,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link,useNavigate } from "react-router-dom";
 
  const Home = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggleForm = () => {
-    setIsFormOpen(!isFormOpen);
+    // setIsFormOpen(!isFormOpen);
+    navigate('/contact')
+    window.scrollTo(20, 20);
   };
   ///accordion
   const [activeIndex, setActiveIndex] = useState(null);
@@ -30,6 +33,15 @@ import Slider from "react-slick";
 
     }
 };
+const handleBooking=()=>{
+  navigate('/pricing');
+  window.scrollTo(0, 0);
+}
+const handlePricing = ()=>{
+  navigate('/pricing');
+  window.scrollTo(0, 0);
+}
+
 
 
     const accordionItems = [
@@ -57,13 +69,18 @@ Hyundai Starex : SGD 130
     };
   return (
     <div className="home">
-      <div className="homequote"><h1>EXPLORE DESTINATIONS,<br />
-        WITH DISTINCTION.</h1></div>
+ <div className="homequote">
+  <h1 className="animated-heading">TRANSFORMING YOUR COMMUTE EXPERIENCE <br/> CONNECTING PEOPLE AND PLACES</h1> 
+</div>
+
       <div className="bgpic" style={{ backgroundImage: `url(${citypic})` }}>
       </div>
       <div className="homecontparas">
         <h2 className="Headinghome">MALBAY EXPRESS TRANSPORT SOLUTIONS</h2><br />
-        <p className="padding20px fontpara parahome">TrueWay Transport Solutions seamlessly connects Singapore to prime Malaysian spots like Johor Bahru and Legoland. Catering to diverse traveler needs, our MVP Private Car services offer safety, comfort, and affordability for individuals, families, and groups. With premium vehicles and skilled drivers, we ensure every journey transcends mere travel. Trust TrueWay for unparalleled transport solutions.</p>
+       
+        <p className="padding20px fontpara parahome">At MalaBay Express Transport Solutions, we specialize in the safe and efficient transportation of people from singapore to malaysia. As a dedicated transport company, we understand the importance of reliable and comfortable 
+        transportation for individuals. Whether you need a convenient airport transfer, a dependable shuttle service, or private transportation for events, our experienced drivers are here to ensure you reach your destination with ease. Our commitment to safety, punctuality, and exceptional customer service sets us apart. We take pride in offering a range of
+         vehicles to accommodate your specific needs, and our drivers are trained to provide a pleasant and secure journey. Trust us to be your partner in personal transportation, and experience the convenience and peace of mind that MalBay Express Transport Solutions brings to every ride.</p>
 
         <button onClick={toggleForm} className="know-more-btn"> {isFormOpen ? "Close" : "Get Info"}</button>
       <br/>
@@ -110,15 +127,7 @@ Hyundai Starex : SGD 130
              </div>
        
              {/* Car */}
-             <div className="col-md-6 mb-3">
-               <select className="form-control" placeholder="Car">
-                 {/* Example cars */}
-                 <option value="" disabled selected>Select Car</option>
-                 <option value="Sedan">Sedan</option>
-                 <option value="SUV">SUV</option>
-                 {/* ... other cars ... */}
-               </select>
-             </div>
+          
        
              {/* Pickup Date */}
              <div className="col-md-6 mb-3">
@@ -128,11 +137,10 @@ Hyundai Starex : SGD 130
              {/* Pickup Time */}
              <div className="col-md-6 mb-3">
                <select className="form-control" placeholder="Pickup Time">
-                 {/* Example times */}
-                 <option value="" disabled selected>Select Pickup Time</option>
+            <option value="" disabled selected>Select Pickup Time</option>
                  <option value="09:00">09:00 AM</option>
                  <option value="10:00">10:00 AM</option>
-                 {/* ... other times ... */}
+                
                </select>
              </div>
        
@@ -169,7 +177,7 @@ Hyundai Starex : SGD 130
        
            {/* Submit Button */}
            <div className="mt-3">
-             <button type="submit" className="btn btn-primary btn-block">Submit</button>
+             <button type="submit" className="btn btn-primary btn-block" >Submit</button>
            </div>
          </form>
        </div>
@@ -183,8 +191,9 @@ Hyundai Starex : SGD 130
             <div className="fleet-container">
 
 <div className="fleet-text">
-  <h2>Our Elite Fleet<br/>BRIDGING SINGAPORE & MALAYSIA</h2>
-  <p>Journey in elegance and comfort with our premium MPVs. Each vehicle in our collection is diligently maintained, ensuring not just punctuality but also an immaculate presence. Experience the blend of luxury and reliability, every mile of the way.</p>
+  <h2>Seamless Transport Solutions<br/>Connecting Singapore and Malaysia</h2>
+  <p>Our extensive fleet of modern vehicles, a team of skilled professionals, and a commitment to punctuality ensure that your journey with us is smooth, secure,
+     and stress-free. Whether you're a business looking to optimize your supply chain, a traveler seeking convenience, or anyone in between, we're here to cater to your unique transport needs.</p>
 </div>
 
 <div className="fleet-images">
@@ -193,7 +202,7 @@ Hyundai Starex : SGD 130
 </div>
 
 </div>
-<button className="clasicbtn">BOOK NOW</button>
+ <button className="clasicbtn" onClick={handleBooking}>BOOK NOW</button>
 
       </div>
   
@@ -210,7 +219,7 @@ Hyundai Starex : SGD 130
                     </div>
                 ))}
             </div>
-            <button className="know-more-btn">Know More</button>
+          <Link to='/pricing'>  <button onClick={handlePricing} className="know-more-btn">Know More</button></Link>
         </div>
         <div className="content-wrapper">
     <h3>THE PERFECT SEAT</h3>
@@ -219,7 +228,8 @@ Hyundai Starex : SGD 130
         <h1>OUR FLEET</h1>
         <div className="line"></div>
     </div>
-    <p>Upholding the highest standards of safety, maintenance, and aesthetics, our diverse fleet boasts only the newest models of luxury sedans, SUVs, minibuses, and coaches. Explore our curated selection tailored to your preferences.</p>
+    <p>At MalBay Express, we are unwavering in our commitment to safety, maintenance, and aesthetic excellence. Our versatile fleet exclusively features the latest luxury sedan, SUV, minibus,
+       and coach models. Discover our carefully curated collection, thoughtfully designed to cater to your unique preferences."</p>
 
     <Slider {...settings}>
         <div>

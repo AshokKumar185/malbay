@@ -4,12 +4,15 @@
 }
 .transport-container {
     display: flex;
-   
-    padding-left: 25px;
-    margin-bottom: 0px;
+    gap: 80px;
+    padding-left: 40px;
+    margin-bottom: 40px;
     padding-bottom: 30px;
-}
 
+}
+.welcome-container {
+    width: 700px;
+}
 .welcome-heading {
     font-weight: bold;
 }
@@ -38,14 +41,10 @@
     width: 160px;
     border: 1px solid #3498db;
     transition: background-color 0.5s ease;
-  justify-content: center;
-  justify-items: center;
-  display: flex;
-    margin: 0 auto;
+    margin-top: 15px;
     font-weight: bold;
     animation: shadow-blink 3s infinite; 
 }
-
 .know-more-bt:hover {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 4px #ccc;
@@ -55,19 +54,34 @@
 
 .travel-container {
     background-color: #d4dfe8;
-    width: 100%;
     min-height: 80vh;
-    padding-left: 65px;
+    padding-left: 40px;
     padding-bottom: 40px;
     padding-top: 67px;
+    padding-right: 20px;
 }
-
+.choose-container {
+    width: 1150px;
+    margin-bottom: 35px;
+}
 .safety-icon {
     font-size: 95px;
     color: #000000;
     margin-bottom: 15px;
 }
-
+.choose-list-item-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 380px;
+      border: 1px solid #ccc;
+      padding: 9px;
+      border-radius: 10px;
+      background-color: #ccc5;
+      height: 400px;
+     
+}
 .safety-heading {
     color: #232c27;
     font-size: 24px;
@@ -81,12 +95,9 @@
 }
 .choose-list-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     gap: 20px;
-   
-    align-items: center; /* Center list items vertically */
-    width: 100%; /* Take full width */
+    padding-left: 0px;
+    padding-left: 30px;
     list-style-type: none;
 }
 .travel-desc {
@@ -102,35 +113,74 @@
     align-items: center;
     justify-content: center;
   }
-.choose-list-item-container{
-    background-color: #ccc;
-    padding: 20px;
-    height: 330px;
-    width: 350px;
-}
-.choose-container{
-    text-align: center;
-    margin: auto;
-    padding: 0 10%;
-}
-  @media screen and (max-width: 960px) {
+
+  @media (max-width:968px) {
+    .half-image {
+        display: none;
+    }
+    .transport-container {
+        margin-bottom: 20px;
+        align-items: center;
+        padding-right: 30px;
+    }
+    .know-more-bt {
+        font-size: 12px;
+    }
     .choose-container {
-        padding: 0 13% 0 8%;
-        text-align: center;
+        width: 80%;
     }
-
+    .choose-list-container {
+       padding-left: 0px;
+       align-items: flex-start;
+       justify-content: flex-start;
+       
+    }
     .choose-list-item-container {
-        padding: 20px;
-        margin: auto;
-        width: 330px;
-        margin-right: 10%;
-        background-color: #ccc5;
+        width: 200px;
     }
-
-    .carrr {
-        width: 70%;
-        margin-top: 20px;
+    .about-car-img {
+        width: 40%;
+        height: 40%;
     }
-  
+    .welcome-container {
+        width: 50%;
+    }
     
+    .welcome-span{
+        display: none;
+    }
+  }
+
+
+  @media (max-width:420px) { 
+    .welcome-container {
+        width: 90%;
+    }
+    .about-container {
+        width: 100%;
+    }
+    .transport-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+    .about-car-img {
+        width: 90%;
+        height: 50%;
+        margin-bottom: 0px;
+    }
+      .choose-list-container {
+        flex-direction: column;
+      }
+      .choose-list-item-container{
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .travel-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .choose-container {
+        width: 90%;
+      }
   }

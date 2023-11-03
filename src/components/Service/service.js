@@ -6,10 +6,16 @@ import car from "../../asset/Airport-Transfer.jpg"
 import car1 from "../../asset/Private-Aviation.jpg"
 import car2 from "../../asset/Hourly-Charter.jpg"
 import car3 from "../../asset/Long-DistanceTrip.jpg"
+import { Link ,useNavigate} from "react-router-dom";
 
 
 const Service = () => {
-
+    const navigate = useNavigate();
+    const handleLearnmore=()=>{
+        navigate('/pricing');
+    
+        window.scrollTo(0, 0);
+    }
     return(
         <div className="service-bg-container">
             <div className="luxury-car-container">
@@ -42,40 +48,39 @@ const Service = () => {
                           ready to accommodate last-minute or pre-planned bookings for groups of any size. Choose Mundi for a 
                           luxurious and secure journey to the airport, ensuring you arrive in style and peace of mind.
                         </p>
-                        <button className="btn btn-info margintop">Learn more</button>
+                    <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
                 </div>
-                <img className="marginbtm" src={car} alt="cars" style={{borderRadius:"10px"}} />
+                <img src={car} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
             </div>
             <div className="privat-bg-container">
-
-                <img  className="margintop" src={car1} alt="cars" style={{borderRadius:"10px"}}/>
+                <img src={car1} alt="cars" style={{borderRadius:"10px"}} className="car-img"/>
                 <div className="private-transfer-container">
                       <h1>Exclusive Ground Transportation for Private Aviation</h1>
                       <p>Experience a level of ground transportation service like never before with Mundi,
                          dedicated to serving the private aviation market. Our reach extends across private airfields throughout the U.S. and worldwide, where we designate a dedicated private aviation transportation specialist to each client. 
                         Choose Mundi for seamless access to private airports and FBOs, delivered with our premium car service.</p>
-                        <button className="btn btn-info">Learn more</button>
+                        <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
                 </div>
             </div>
-            <div className="airport-bg-container1">
+            <div className="airport-bg-container">
                 <div className="airport-transfer-container">
                       <h1>Flexible Hourly Charter</h1>
                       <p>For any trip, whether it's a brief jaunt or an extended journey, 
                         Mundi offers an adaptable hourly service. Have a chauffeur at your beck and call for as long as you require.
                          No specific destination information is necessary to arrange this service.
                          Simply provide your pick-up details and choose your travel stops while en route.</p>
-                        <button className="btn btn-info">Learn more</button>
+                         <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
                 </div>
-                <img className="margiiin" src={car2} alt="cars" style={{borderRadius:"10px"}} />
+                <img src={car2} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
             </div>
 
             <div className="extended-bg-container">
-            <img src={car3} alt="cars" style={{borderRadius:"10px"}} />
+            <img src={car3} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
                 <div className="private-transfer-container">
                       <h1>Extended Excursions</h1>
                       <p>Experience top-tier transportation services with Mundi on long-distance journeys from Miami to neighboring cities and regions. Whether it's for business purposes or leisurely exploration of tourist attractions and iconic locales, revel in the lap of luxury within our premium vehicles, accompanied by a private chauffeur.
                          Every mile becomes a private retreat, allowing you to make the most of your travel in comfort and style.</p>
-                        <button className="btn btn-info">Learn more</button>
+                         <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
                 </div>
               
             </div>

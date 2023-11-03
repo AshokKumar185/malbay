@@ -1,0 +1,167 @@
+.fleets-container {
+    min-height: 100vh;
+    background-color: #fff;
+    
+}
+.fleets-top-container {
+    background-image: url("https://res.cloudinary.com/dorh4kb0v/image/upload/v1697628223/matt-nelson-dCNGrp_0GyM-unsplash_nnvkdy.jpg");
+    height: 70vh;
+    background-size: auto;
+    background-size: cover;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ultimate-heading {
+    color: #026afd;
+    background-color: #ffffff98;
+    padding: 6px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px;
+    width: 100%;
+    font-weight: bold;
+}
+.ultimate-head-container {
+    border: 3px solid #fff;
+    padding: 7px 5px 7px 5px;
+    width: 49%;
+    display: flex;
+    height: 18%;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.fleet-list-container {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+    gap: 45px;
+    background-color: #fff;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+}
+
+.fleet-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fleet-img {
+    transition: transform 0.2s;
+}
+.fleet-img:hover {
+    transform: scale(1.2);
+}
+.innova-img {
+    transform: scaleX(-1);
+    width: 500px;
+}
+.hyundai-img {
+    transform: scaleX(-1);
+}
+.innova-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0px;
+}
+.innova-heading-container {
+    width: 50%;
+    text-align: center;
+    padding-right: 15px;
+}
+.innova-bg-container {
+    background-color: #D2E0FB;
+    padding-top: 45px;
+    min-height: 55vh;
+    padding-bottom: 45px;
+}
+.innova-heading {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+}
+.innova-desc {
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.car-details-list-container {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 50px;
+}
+.car-details-list-item {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;;
+}
+.alphard-bg-container {
+    background-color: #ffffff;
+    padding-top: 45px;
+    min-height: 55vh;
+    padding-bottom: 45px;
+}
+.alphard-img {
+    
+}
+.alphard-heading-container {
+    order: -1;
+    width: 50%;
+    text-align: center;
+    padding-left: 20px;
+}
+.alphard-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0px;
+}
+
+@media (max-width:568px) {
+    .fleets-top-container {
+        width: 100%;
+    }
+    .car-details-list-container {
+        flex-direction: row;
+        gap: 30px;
+        padding-left: 0px;
+        flex-wrap: wrap;
+    }
+    .fleets-container {
+        width: 100%;
+    }
+     .fleet-list-container {
+        flex-direction: column;
+     }
+     .alphard-container {
+        flex-direction: column;
+     }
+     .innova-container {
+        flex-direction: column;
+     }
+     .innova-img {
+        width: 300px;
+     }
+     .hyundai-img {
+        width: 300px;
+     }
+     .alphard-img {
+        width: 340px;
+        order: -1;
+     }
+     .ultimate-head-container {
+        width: 80%;
+        text-align: center;
+     }
+     .fleets-top-container {
+        height: 60vh;
+     }
+     .innova-heading-container {
+        width: 88%;
+     }
+     .alphard-heading-container{
+        width: 88%;
+     }
+}

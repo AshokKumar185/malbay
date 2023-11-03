@@ -1,0 +1,33 @@
+.float-buttons {
+    position: fixed;
+    bottom: 30%;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+  }
+  
+  .whatsapp-button {
+    background-color: #25d366;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .contact-button {
+    background-color: #9a9d9f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .whatsapp-button:hover,
+  .contact-button:hover {
+    background-color: #0056b3;
+  }
+  

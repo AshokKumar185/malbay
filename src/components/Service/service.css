@@ -1,28 +1,28 @@
+.services-bg-container {
+    min-height: 100vh;
+}
 .services-list-container {
     list-style-type: none;
     display: flex;
     padding-left: 0px;
     margin-top: 30px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
 }
 .services-list-item {
-    width: calc(25% - 10px);
+    width: 350px;
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 20px;
 }
-.luxury-car-container {
+.luxury-car-container{
     padding-left: 50px;
     padding-top: 40px;
-    background-image: linear-gradient(black, #1e1e1e);
+    background-image: linear-gradient(black,#1e1e1e);
     color: #FFF;
     min-height: 60vh;
     padding-bottom: 26px;
+    margin-bottom: 35px;
 }
 .luxury-heading {
     text-align: center;
@@ -34,12 +34,10 @@
     font-size: 17px;
     margin-bottom: 50px;
 }
-
 .services-icon {
     font-size: 75px;
     margin-bottom: 20px;
 }
-
 .services-desc {
     font-weight: bold;
     font-size: 24px;
@@ -53,25 +51,18 @@
     gap: 30px;
     justify-content: space-around;
 }
-.airport-bg-container1{
-    display: flex;
-    height: 60vh;
-    align-items: center;
-    padding-left: 50px;
-    gap: 30px;
-    justify-content: space-around;
-}
 .airport-transfer-container {
     width: 600px;
 }
 .privat-bg-container {
     display: flex;
-    height: 60vh;
+    min-height: 60vh;
     align-items: center;
     padding-left: 50px;
     gap: 50px;
     justify-content: space-around;
     color: #FFFF;
+    /* background-image: linear-gradient(to left,#3498db,#8e44ad); */
     background-color: #4D4C7D;
 }
 
@@ -80,70 +71,78 @@
 }
 .extended-bg-container {
     display: flex;
-    height: 60vh;
+    min-height: 60vh;
     align-items: center;
     padding-left: 50px;
     gap: 50px;
     justify-content: space-around;
     color: #FFFF;
+    /* background-image: linear-gradient(to left,#3498db,#8e44ad); */
     background-color: #4D4C7D;
 }
-@media screen and (max-width: 960px) {
+
+
+
+@media (max-width:568px) {
+    .services-list-container {
+        flex-direction: column;
+    }
+    .services-list-item {
+        margin-bottom: 30px;
+        align-self: center;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #ccc3;
+        border-radius: 4px;
+    }
+    .extended-bg-container {
+        padding-left: 20px;
+        padding-right: 10px;
+    }
     .luxury-car-container {
         padding-left: 20px;
         padding-right: 20px;
-        min-height: 100vh !important;
     }
-    
-    .services-list-container {
-        justify-content: space-between;
-    }
-
-    .services-list-item {
-        width: calc(50% - 10px);
-    }
-    .marginbtm{
-        margin-top: -100px;
-    }
-    .margintop{
-        margin-top: 80px;
-        margin-bottom: -20px;
-    }
-
-    .airport-bg-container,
-    .privat-bg-container,
-    .extended-bg-container {
+    .airport-bg-container {
         flex-direction: column;
-        align-items: center;
-        gap: 30px;
-     
-        min-height: 110vh;
+        width: 100%;
+        padding-left: 20px;
+        margin-bottom: 50px;
+        padding-right: 20px;
+        padding-top: 30px;
     }
-    .margiiin{
-        margin-top: -40px;
+    .car-img {
+        width: 380px;
+
     }
-.airport-bg-container1{
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    min-height: 90vh;
-}
-    .airport-transfer-container,
+    .services-bg-container {
+        width: 100%;
+    }
+    .airport-transfer-container {
+        width: 100%;
+    }
+    .privat-bg-container {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 25px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+    }
     .private-transfer-container {
         width: 100%;
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
     }
 
-    img {
-        width: 70%;
-        
-        margin: 0 auto;
+    .extended-bg-container {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 20px;
+        margin-bottom: 35px;
+        padding-top: 30px;
+        padding-right: 20px;
+        padding-bottom: 30px;
     }
-
-    .btn {
-        display: block;
-        margin: 20px auto;
-    }
+    
 }

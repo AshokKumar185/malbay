@@ -1,0 +1,71 @@
+.collapsible-button-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 70px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    transition: background-color 0.9s;
+    
+}
+.collapse-list-item {
+    width: 300px;    
+}
+.content {
+    padding-top: 10px;
+   border-right: 1px solid #ccc;
+   border-left: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+    width: 300px;
+  
+    justify-items: center;
+    align-items: center;
+    display: flex;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 90%; 
+    text-align: center; 
+    
+  }
+.collapsible-button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+   width: 100%;
+   height: 100%;
+   font-weight: bold;
+}
+.clasicbookkbtn{
+    background-color: #3498db;
+    padding: 4px;
+    border-radius: 5px;
+    outline: none;
+    color: #ffff;
+   margin-left: 27px;
+    border: 1px solid #3498db;
+    transition: background-color 0.5s ease;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    font-weight: bold;
+    animation: shadow-blink 3s infinite; 
+}
+.collapsible-button-container:hover {
+    background-color:#337ccfd8;
+}
+.collapsible-button:hover {
+    color: #fff;
+}
+.carlists{
+    list-style: none;
+    line-height: 18px;
+  
+}
+.pararara{
+    font-size: 14px;
+    font-weight: 500;
+
+}

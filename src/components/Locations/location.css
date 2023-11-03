@@ -8,7 +8,25 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
+}
+.mersing-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.lumbur-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.highlands-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
 }
 .framing-container {
     width: 550px;
@@ -36,9 +54,9 @@
     color: #ffff;
     width: 160px;
     border: 1px solid #3498db;
-    transition: background-color 0.5s ease;
     margin-top: 15px;
     font-weight: bold;
+    transition: background-color 0.5s ease;
     animation: shadow-blink 3s infinite; 
 }
 .book-now-btn:hover {
@@ -57,4 +75,50 @@
     100% {
       box-shadow: 0 0 10px rgb(120, 189, 245);
     }
+  }
+
+
+  @media (max-width:568px) {
+    .loacation-bg-container {
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+    .sekinchan-container {
+        flex-direction: column;
+        background-color: #FFF;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .mersing-container {
+        flex-direction: column;
+        /* background-color: #f2b203; */
+        background-image: linear-gradient(to right,#dfd3ee,#c8afe6,#d3b5f7);
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .lumbur-container{
+        flex-direction: column;
+        background-color: #FFF;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .highlands-container {
+        flex-direction: column;
+        /* background-color: #f2b203; */
+        background-image: linear-gradient(to right,#dfd3ee,#c8afe6,#d3b5f7);
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+    }
+    .framing-container {
+        width: 90%;
+        text-align: start;
+    }
+    .location-img {
+        width: 370px;
+        border-radius: 10px;
+        order: -1;
+        margin-bottom: 20px;
+    }
+   
   }

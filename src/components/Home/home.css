@@ -9,6 +9,20 @@
     padding: 20px;
     padding-left: 70px;
 }
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the animated-heading element */
+  .animated-heading {
+    opacity: 0; /* Start with 0 opacity (invisible) */
+    animation: fadeIn 2s ease forwards; /* Apply the fadeIn animation with a 1-second duration */
+  }
 .Headinghome{
     text-align: center;
     font-family: Oswald,Sans-serif;
@@ -28,7 +42,7 @@
     font-family: "Open Sans",Sans-serif;
 }
 .homecontparas{
-    padding:  80px;
+    padding: 80px;
 }
 .marginbtn{
     margin-left: 45%;
@@ -116,7 +130,7 @@
     align-items: flex-start;
   }
   .clasicbtn{
-    margin-top: -20px;
+    margin-top: 10px;
     margin-left: 20px;
   }
   .content-wrapper {
@@ -152,7 +166,7 @@
 
 @media screen and (max-width: 960px) {
     .bgpic {
-        height: 60vh;
+        height: 38vh;
         width: 100%;
         background-size: contain;
         background-repeat: no-repeat;
@@ -176,7 +190,7 @@
         font-size: 16px;
     }
     .homecontparas{
-        padding: 0 30px;
+        padding: 0 30px 30px 30px;
     }
 
     .marginbtn{
@@ -191,7 +205,6 @@
         animation: fadeIn 1.5s ease-in-out;
     }
     .fleet-container {
-        padding: 0px 30px;
         flex-direction: column;
       }
       .fleet-text {
@@ -215,4 +228,11 @@
         display: block;  /* makes image a block-level element */
         margin: 0 auto;  /* centers image horizontally */
     }
+}
+
+@media screen and (max-width: 796px) {
+    .homecontparas{
+        padding: 0 30px 30px 30px;
+    }
+
 }
